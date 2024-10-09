@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+    overflow: hidden;
+}
+
+#game-area {
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cell {
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: white; /* Paredes completamente llenas */
+}
+
+.path {
+    background-color: transparent; /* Camino transparente */
+}
+
+#red {
+    position: absolute;
+    background-color: #ff4d4d; /* Rojo mate para Red */
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+}
+
+#exit {
+    position: absolute;
+    background-color: #ff0000; /* Rojo brillante para la meta */
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6); /* Sombra */
+}
+
+.enemy {
+    position: absolute;
+    background-color: #15ff00; /* Color de los enemigos */
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#restart-button, #exit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#exit-button {
+    background-color: #444; /* Different color for the exit button */
+}
+
