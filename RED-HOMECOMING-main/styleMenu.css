@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+  }
+nav {
+    background-color: darkslategrey;
+    text-align: right;
+    text-decoration-line: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150%;
+}
+div{
+    text-align: center;
+    align-items: center;
+}
