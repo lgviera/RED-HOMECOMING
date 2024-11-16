@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Verificar si RED llego a la salida
         if (Math.round(redX) === cols - 2 && Math.round(redY) === rows - 2) {
             alert("Has llegado al final");
-            window.location.href = 'index.html';
+            window.location.href = '/html/index.html';
         }
     };
 // FIN BLOQUE 5
@@ -401,7 +401,7 @@ const moveEnemies = (currentTime) => {
         if (Math.round(enemy.x) === Math.round(redX) && Math.round(enemy.y) === Math.round(redY) && !gameOver) {
             gameOver = true;
             alert("Has Perdido!");
-            window.location.href = 'index.html';
+            window.location.href = '/html/index.html';
         }
     });
 };
