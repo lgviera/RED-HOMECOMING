@@ -17,6 +17,10 @@ function musicToggle(){
         game_music.pause();
     }
 }
+musicToggle()
+
+
+
 // FIN BLOQUE 1
 
 // BLOQUE 2
