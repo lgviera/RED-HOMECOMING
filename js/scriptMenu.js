@@ -29,19 +29,19 @@ function Easy() {
     // Guardar configuración en localStorage
     localStorage.setItem('enemyCount', 5);        // 5 enemigos
     localStorage.setItem('enemyMoveInterval', 500);      // Velocidad de 500 ms
-    window.location.href = '/html/index1.html';         // Redirigir a la página del juego
+    window.location.href = 'index1.html';         // Redirigir a la página del juego
 }
 
 function Medium() {
     localStorage.setItem('enemyCount', 8);        // 8 enemigos
     localStorage.setItem('enemyMoveInterval', 400);      // Velocidad de 400 ms
-    window.location.href = '/html/index1.html';         // Redirigir a la página del juego
+    window.location.href = 'index1.html';         // Redirigir a la página del juego
 }
 
 function Hard() {
     localStorage.setItem('enemyCount', 12);       // 12 enemigos
     localStorage.setItem('enemyMoveInterval', 270);      // Velocidad de 300 ms
-    window.location.href = '/html/index1.html';         // Redirigir a la página del juego
+    window.location.href = 'index1.html';         // Redirigir a la página del juego
 }
 
 
