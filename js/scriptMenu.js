@@ -57,6 +57,7 @@ function musicToggle(){
         menu_music.pause();
     }
 }
+musicToggle()
 
 //usar <marquee direction='up'></marquee>
 //para que la lista de los puntos suba indefinidamente
