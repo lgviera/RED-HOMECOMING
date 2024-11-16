@@ -1,69 +1,166 @@
-/* Estilos generales para el cuerpo de la página */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+/* Reset de márgenes y rellenos */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilo para la sección de créditos */
-#creditos {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+/* Fondo y fuente global */
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Para que los créditos se alineen hacia arriba */
+    align-items: center;
     text-align: center;
+    position: relative;
+    padding-top: 80px; /* Espacio para el menú */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+
+/* Estilos del nav y menú */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #3498db;
+    color: #0d0d0d;
+    box-shadow: 0 auto 15px rgba(52, 152, 219, 0.7);
+    transform: scale(1.1);
+}
+
+.menu input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Estilos para la sección de créditos */
+#creditos {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 700px;
+    text-align: left;
+    animation: fadeInCredits 2s ease-out forwards;
+    z-index: 1; /* Asegura que el contenido se muestre encima del fondo */
+    margin-top: 150px; /* Ajustar para que no se solape con el menú */
+}
+
+@keyframes fadeInCredits {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #creditos h1 {
-    font-size: 32px;
-    color: #333;
+    font-size: 30px;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #3498db;
 }
 
-/* Estilos para los encabezados secundarios */
-#creditos h2 {
+#creditos p {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+#creditos .contenido h2 {
     font-size: 24px;
-    color: #007BFF;
-    margin-bottom: 10px;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Estilo para los párrafos y lista de participantes */
-#creditos .contenido p {
-    font-size: 18px;
-    color: #555;
-}
-
-#creditos .contenido ul {
+#creditos .listaparticipantes {
     list-style-type: none;
     padding-left: 0;
 }
 
-#creditos .contenido ul li {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 8px;
+#creditos .listaparticipantes li {
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Agregar efecto de hover a las listas */
-#creditos .contenido ul li:hover {
-    color: #007BFF;
-    cursor: pointer;
+/* Estilo para la imagen y el texto de derechos */
+#centerImg {
+    margin-top: 30px;
 }
 
-/* Estilos adicionales para la apariencia de los botones, si los hay */
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.dominioimagen {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
-button:hover {
-    background-color: #0056b3;
+#centerImg img {
+    width: 40%;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fondo con imagen para los créditos */
+body {
+    background-image: url('space-background.jpg'); /* Cambiar la imagen si lo deseas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: auto; /* Permitir scroll sin problemas */
+}
+
+/* Para evitar el fondo oscuro que impide el desplazamiento */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Eliminar la capa oscura */
+    z-index: 0; /* Asegura que el contenido se muestre sobre el fondo */
 }
